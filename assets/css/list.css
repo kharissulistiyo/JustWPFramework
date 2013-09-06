@@ -1,0 +1,53 @@
+/* 
+* HTML list elements 
+* Version 0.0.1
+* Created September 01, 2013
+* ======================= */
+
+
+dl{
+
+}
+
+dt{
+
+}
+
+dd{
+
+}
+
+ul{
+	
+}	
+
+ul li{
+
+}
+
+ol{
+
+}
+
+ol li{
+
+}
+
+ol ul{
+
+}
+
+
+/* UL hyrarchy */
+
+ul ul{
+
+}
+
+
+/* OL hyrarchy */
+
+ol ol{
+
+}
+

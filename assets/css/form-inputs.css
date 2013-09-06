@@ -1,0 +1,95 @@
+/* 
+* Input form elements 
+* Version 0.0.1
+* Created September 01, 2013
+* ======================= */
+
+body{
+	font-size:16px; /* Default font size */
+}
+
+
+
+
+/* Text */
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="hidden"],
+input[type="password"]{
+	border:none;
+	background:#bdc3c7;
+}
+
+
+/* Radio */
+
+input[type="radio"],
+input[type="checkbox"]{
+	margin-right:0.625em;
+	vertical-align:middle;
+	outline:none; /* Remove dotted outline appears on IE 8 */
+}
+
+input[type="checkbox"]{
+	vertical-align:bottom;
+	margin-bottom:0.188em;
+}
+
+
+/* Button */
+
+input[type="reset"],
+input[type="button"],
+input[type="submit"]{
+	border:none;
+	background:#e74c3c;
+	color:#bdc3c7;
+	padding:0.625em 1.250em;
+}
+
+
+
+/* Select */
+
+select{
+	border:none;  
+	outline:none; /* Remove dotted outline appears on IE 8 */
+}
+
+
+/* Textarea */
+
+textarea{
+	border:none;
+	background:#bdc3c7;
+}
+
+
+/* Repeatable Pattern */
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+input[type="hidden"]:focus,
+input[type="password"]:focus{
+	outline:none;
+}
+
+label{
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+fieldset{
+	border:1px solid #1abc9c;
+}
+
+
+/* Apply responsive */
+
+input, textarea{
+	max-width:100%;
+}
