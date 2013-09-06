@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	
 	
-	<title>Front End Framework Made by Nerd</title>
+	<title>JustWPFramework</title>
 	
 	
 	
