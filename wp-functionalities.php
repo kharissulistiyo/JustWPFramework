@@ -198,8 +198,20 @@
 				
 			<ol class="children">
 		
-				<li id="comment-1" class="comment even thread-even depth-1">
+				<li id="comment-2" class="comment even thread-even depth-2">
+				
 						<?php include('comment.php'); ?>
+						
+						<ol class="children">
+						
+							<li id="comment-3" class="comment even thread-even depth-3">
+							
+								<?php include('comment.php'); ?>
+								
+							</li>
+						
+						</ol><!-- /.children -->
+						
 				</li>					
 			
 			</ol><!-- /.shildren -->			
