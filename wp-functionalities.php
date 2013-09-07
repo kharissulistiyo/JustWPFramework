@@ -172,12 +172,38 @@
 	</tbody>
 	</table>
 
-
-
-
-
-<h3 class="subtitle">Comments List</h3>
-
 	
 	
+	
+<h3 class="subtitle">Comments List (Single Commment)</h3>
 
+	<ol class="comment-list">
+			
+		<li id="comment-0" class="comment even thread-even depth-1">
+			<?php include('comment.php'); ?>
+		</li>	
+	
+	</ol>
+	
+
+	
+<h3 class="subtitle">Comments List (Threaded Commment)</h3>	
+
+
+	<ol class="comment-list">
+			
+		<li id="comment-1" class="comment even thread-even depth-1">
+		
+			<?php include('comment.php'); ?>
+				
+			<ol class="children">
+		
+				<li id="comment-1" class="comment even thread-even depth-1">
+						<?php include('comment.php'); ?>
+				</li>					
+			
+			</ol><!-- /.shildren -->			
+			
+		</li>	
+	
+	</ol><!-- /.comment-list -->
