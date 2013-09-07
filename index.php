@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="assets/css/table.css" />
 	<link rel="stylesheet" href="assets/css/wp.css" />
 	
-	
 	<style type="text/css">
 
 		body{
@@ -25,6 +24,7 @@
 			color:#7f8c8d;
 			padding:0;
 			margin:0;			
+			font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 		}
 		
 		.section{
