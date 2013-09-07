@@ -78,6 +78,90 @@
 /* WP Calendar */
 
 
+table#wp-calendar{
+
+}
+
+table#wp-calendar caption{
+
+}
+
+table#wp-calendar thead{
+
+}
+
+table#wp-calendar thead tr{
+
+}
+
+table#wp-calendar thead tr th{
+
+}
+
+table#wp-calendar tfoot{
+
+}
+
+table#wp-calendar tfoot tr{
+
+}
+
+table#wp-calendar tfoot tr td{
+
+}
+
+table#wp-calendar tbody{
+
+}
+
+table#wp-calendar tbody tr{
+
+}
+
+table#wp-calendar tbody td{
+
+}
+
+
+
+/* WP Comments */
+
+
+ol.comment-list{
+
+}
+
+ol.comment-list li.comment{
+
+}
+
+ol.comment-list ol.children{
+
+}
+
+ol.comment-list .comment-body{
+
+}
+
+ol.comment-list .vcard{
+
+}
+
+ol.comment-list .comment-content{
+
+}
+
+ol.comment-list a.comment-edit-link{
+
+}
+
+ol.comment-list .reply{
+
+}
+
+ol.comment-list .reply a.comment-reply-link{
+
+}
 
 
 
