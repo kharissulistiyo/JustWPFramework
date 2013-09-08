@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="assets/css/table.css" />
 	<link rel="stylesheet" href="assets/css/wp.css" />
 	
+	<script src="assets/js/modernizr.js" type="text/javascript"></script>
+	
 	<style type="text/css">
 
 		body{
