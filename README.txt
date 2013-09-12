@@ -18,6 +18,7 @@ First stage:
 This baby framework includes: 
 
 - CSS consistency : Normalize.css http://nicolasgallagher.com/about-normalize-css
+- HTML5 and CSS 3 cross browsers detection : modernizr.js http://modernizr.com
 
 Installation:
 
