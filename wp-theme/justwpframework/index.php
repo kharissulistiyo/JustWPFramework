@@ -1,20 +1,18 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
+<?php 
 
-	<meta charset="UTF-8">
-	<title></title>
-	
-</head>
-<body>
-	
-	
-	<?php wp_head(); ?>
-	
-	
-	
-	
-	<?php wp_footer(); ?>
-	
-</body>
-</html>
+/*
+* Index file template
+* ===================*/
+
+get_header(); ?>
+
+
+
+
+
+
+
+
+
+
+<?php get_footer(); ?>
