@@ -55,24 +55,49 @@ add_action( 'after_setup_theme', 'justwpframework_setup' );
 
 
 
+/**
+ * Title tag
+* ========================== */
+
+
+function justwpframework_wp_title( $title, $sep ) {
+	global $paged, $page;
+
+	if ( is_feed() )
+		return $title;
+
+	// Add the site name.
+	$title .= get_bloginfo( 'name' );
+
+	// Add the site description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		$title = "$title $sep $site_description";
+
+	// Add a page number if necessary.
+	if ( $paged >= 2 || $page >= 2 )
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'justwpframework' ), max( $paged, $page ) );
+
+	return $title;
+}
+add_filter( 'wp_title', 'justwpframework_wp_title', 10, 2 ); 
+
+
+
+
 
 /**
- * Function files inclution
+ * Files inclution
  */ 
 
  
- 
+
+/* Enqueue functions */ 
 include('functions/enqueue-scripts.php');
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+/* wp_parse_args() functions */
+include('functions/wp_parse_args.php'); 
  
  
  
