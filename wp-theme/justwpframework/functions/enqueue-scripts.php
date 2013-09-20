@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -8,6 +7,10 @@
 /*
  * Function to register front-end scripts
  * ====================================== */
+ 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly 
+ 
+ 
 
 if ( ! function_exists( 'justwpframework_enqueue_script' ) ) :
 
