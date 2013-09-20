@@ -54,7 +54,24 @@ add_action( 'after_setup_theme', 'justwpframework_setup' );
 
 
 
+/*
+ * Load CSS files for front end
+* =============================== */
 
+if(!function_exists('')){
+
+	function justwpframework_frontend_styles(){
+
+		// Loads main stylesheet.
+		wp_enqueue_style( 'justwpframework-main-style', get_stylesheet_uri(), array(), '2013-09-20' );
+
+	}
+
+}
+add_action( 'wp_enqueue_scripts', 'justwpframework_frontend_styles' );	
+	
+	
+	
 /**
  * Title tag
 * ========================== */
@@ -98,9 +115,14 @@ include('functions/enqueue-scripts.php');
 
 /* wp_parse_args() functions */
 include('functions/wp_parse_args.php'); 
- 
- 
- 
+
+
+/* Template hooks file */
+include('functions/jwp_hooks.php');
+
+
+/* Template constructor file */
+include('functions/jwp_template.php');
  
 
 
