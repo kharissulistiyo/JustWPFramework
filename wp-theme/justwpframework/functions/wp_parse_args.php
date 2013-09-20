@@ -6,6 +6,7 @@
 * wp_parse_args() functions
 * ========================= */
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 /* Site title tag */
@@ -34,7 +35,7 @@ function site_title($args = ''){
 	extract( $args, EXTR_SKIP );
 	
 	if ($wp_title == TRUE && is_tag()) { 
-		echo $tag_archive . ; 	
+		echo $tag_archive ; 	
 	}
 	
 	// $output = $start_text . ' ' . $end_text;	
