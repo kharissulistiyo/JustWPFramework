@@ -2,7 +2,11 @@
 /**
 * The template for displaying post content
 * ======================================== */
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 ?>
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -22,6 +26,7 @@
 	<div class="entry-content">
 
 		<?php 
+		
 		/*
 		* Entry content
 		* Hooked: 'jwp_entry_content', 'jwp_before_entry_content', 5 
@@ -39,6 +44,8 @@
 	/* 
 	* Post footer
 	* Hooked: 'jwp_entry_footer', 'jwp_comment_count', 5
+	* Hooked: 'jwp_entry_footer', 'jwp_post_navigation', 10
+	* Hooked: 'jwp_entry_footer', 'jwp_post_comment', 15
 	*/
 	
 	do_action('jwp_entry_footer'); ?>
