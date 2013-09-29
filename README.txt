@@ -28,3 +28,7 @@ Installation:
 
 - Front-end elements in action: Copy this repo into your root directory of local or live server, then run from your browser.
 - WP theme in action: Copy the "justwpthemeframework" folder inside "wp-theme" to your "themes" folder of your WordPress installation, then activate. Enjoy!
+
+Documentation:
+
+Will coming soon on my site http://kharissulistiyono.com
