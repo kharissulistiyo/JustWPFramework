@@ -27,6 +27,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <body <?php body_class(); ?>>	
 	
 	
+	<?php do_action('jwp_before_wrapper'); ?>
+	
+	
 	<section id="wrapper" class="site">
 	
 	
