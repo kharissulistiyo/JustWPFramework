@@ -41,7 +41,12 @@ if(!function_exists('jwp_main_navigation')){
 			<h3 class="menu-toggler"><?php _e('Main Menu', 'justwpframework'); ?></h3>
 			<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'justwpframework' ); ?>"><?php _e( 'Skip to content', 'justwpframework' ); ?></a>	
 			
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'top-navigation' ) ); ?>
+			<?php wp_nav_menu( array( 
+				'theme_location' => 'primary', 
+				'container' => false,				
+				'menu_class' => 'top-navigation' 
+			) ); 
+			?>
 			
 			<?php do_action('jwp_after_main_menu'); ?>
 			
@@ -255,3 +260,91 @@ if(!function_exists('jwp_link_pages')){
 	}
 	
 }
+
+
+
+
+
+/*
+ * Page Navigation
+* ================ */
+
+if(!function_exists('jwp_page_navigation')){
+
+	function jwp_page_navigation(){
+	
+		global $wp_query;
+			
+		if ( $wp_query->max_num_pages > 1 ) : ?>
+			<nav class="navigation" role="navigation">
+				<h3 class="assistive-text"><?php _e( 'Post navigation', 'justwpframework' ); ?></h3>
+				<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'justwpframework' ) ); ?></div>
+				<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'justwpframework' ) ); ?></div>
+			</nav><!-- /.navigation -->
+		<?php endif;		
+	
+	}
+
+}
+
+
+
+/*
+ * Post Navigation
+* ================ */ 
+
+if(!function_exists('jwp_post_navigation')){
+
+	function jwp_post_navigation(){ ?>
+
+		<?php if ( is_singular() ) : ?>
+	
+		<nav class="nav-single">
+			<h3 class="assistive-text"><?php _e( 'Post navigation', 'justwpframework' ); ?></h3>
+			<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'justwpframework' ) . '</span> %title' ); ?></span>
+			<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'justwpframework' ) . '</span>' ); ?></span>
+		</nav><!-- .nav-single -->	
+		
+		<?php endif; ?>
+	
+	<?php }	
+
+}
+
+
+
+
+/*
+* Comment section
+* =============== */
+
+if(!function_exists('jwp_post_comment')){
+
+	function jwp_post_comment(){
+	
+		if ( is_singular() )
+			comments_template( '', true );
+		
+	}	
+
+}
+
+
+
+/*
+ * Footer
+* ========= */
+
+if(!function_exists('jwp_footer_credit')){
+
+	function jwp_footer_credit(){ ?>
+
+		<div class="footer-credit">
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'justwpframework' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'justwpframework' ); ?>"><?php printf( __( 'Proudly powered by %s', 'justwpframework' ), 'WordPress' ); ?></a>
+		</div><!-- /.footer-credit -->		
+		
+	<?php }
+
+}
+
+ 
