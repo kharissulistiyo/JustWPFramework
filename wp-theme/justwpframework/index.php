@@ -17,10 +17,7 @@ get_header(); ?>
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 		
-			<?php the_title(); ?>
-			<?php the_content(); ?>
-			
-			<hr />
+			<?php get_template_part( 'content', get_post_format() ); ?>
 			
 		<?php endwhile; ?>
 		

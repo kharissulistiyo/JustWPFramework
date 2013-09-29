@@ -112,3 +112,146 @@ if(!function_exists('jwp_searchform')){
 	}
 
 }
+
+
+
+
+/*
+ * JWP Main Content
+* ================= */
+
+// Entry header
+if(!function_exists('jwp_post_title')){
+
+	function jwp_post_title(){ ?>
+	
+	<header class="entry-header">
+
+		<?php if ( is_single() ) : ?>
+		
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+		
+		<?php else : ?>
+		
+		<h1 class="entry-title">
+			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+		</h1>
+		
+		<?php endif; // is_single() ?>		
+	
+	</header>		
+	
+	<?php }
+
+}
+
+// Post meta
+if(!function_exists('jwp_post_meta')){
+
+	function jwp_post_meta(){
+	
+		// Translators: used between list items, there is a space after the comma.
+		$categories_list = get_the_category_list( __( ', ', 'justwpframework' ) );
+
+		// Translators: used between list items, there is a space after the comma.
+		$tag_list = get_the_tag_list( '', __( ', ', 'justwpframework' ) );
+
+		$date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>',
+			esc_url( get_permalink() ),
+			esc_attr( get_the_time() ),
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() )
+		);
+
+		$author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'justwpframework' ), get_the_author() ) ),
+			get_the_author()
+		);
+
+		// Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
+		if ( $tag_list ) {
+			$utility_text = __( 'This entry was posted in %1$s and tagged %2$s on %3$s<span class="by-author"> by %4$s</span>.', 'justwpframework' );
+		} elseif ( $categories_list ) {
+			$utility_text = __( 'This entry was posted in %1$s on %3$s<span class="by-author"> by %4$s</span>.', 'justwpframework' );
+		} else {
+			$utility_text = __( 'This entry was posted on %3$s<span class="by-author"> by %4$s</span>.', 'justwpframework' );
+		}
+
+		printf(
+			$utility_text,
+			$categories_list,
+			$tag_list,
+			$date,
+			$author
+		);	
+	
+	}
+
+}
+
+
+// Comment count
+if(!function_exists('jwp_comment_count')){
+
+	function jwp_comment_count(){ ?>
+
+		<?php if ( comments_open() ) : ?>
+			<div class="comments-link">
+				<?php comments_popup_link( '<span class="leave-reply">' . __( 'No Reply', 'justwpframework' ) . '</span>', __( '1 Reply', 'justwpframework' ), __( '% Replies', 'justwpframework' ) ); ?>
+			</div><!-- .comments-link -->
+		<?php endif; // comments_open() ?>		
+	
+	<?php }
+
+}
+
+
+// Entry wrap opening
+if(!function_exists('jwp_before_entry_content')){
+
+	function jwp_before_entry_content(){ ?>
+	
+		<div class="entry">
+		
+		<?php echo "\n\n"; ?>
+	
+	<?php }
+
+}
+
+
+// Entry wrap closing
+if(!function_exists('jwp_after_entry_content')){
+
+	function jwp_after_entry_content(){ ?>
+	
+		<?php echo "\n\n"; ?>
+	
+		</div><!-- /.entry -->
+	
+	<?php }
+
+}
+
+
+if(!function_exists('jwp_post_entry_content')){
+
+	function jwp_post_entry_content(){
+	
+		the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'justwpframework' ) ); 
+	
+	}
+
+}
+
+
+if(!function_exists('jwp_link_pages')){
+
+	function jwp_link_pages(){
+
+		wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'justwpframework' ), 'after' => '</div>' ) );	
+	
+	}
+	
+}

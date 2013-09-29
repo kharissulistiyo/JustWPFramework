@@ -47,6 +47,16 @@ ul,ol{
 	padding:0;
 }
 
+h1 a,
+h2 a,
+h3 a{
+	text-decoration:none;
+}
+
+
+
+
+
 #wrapper{
 	width:980px;
 	margin:0 auto;	
@@ -87,6 +97,11 @@ ul,ol{
 	display:table;
 	width:35%;
 	float:right;
+}
+
+
+.top-navigation ul a{
+	text-decoration:none;
 }
 
 .top-navigation ul > li{
