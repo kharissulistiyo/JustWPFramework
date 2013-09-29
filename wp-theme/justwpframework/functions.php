@@ -1,10 +1,12 @@
 <?php
 
-
 /* 
  * Theme functions go here 
  * ======================== */
 
+ 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly 
+ 
 
 /**
  * Sets up the content width value based on the theme's design and stylesheet.
@@ -102,9 +104,38 @@ add_filter( 'wp_title', 'justwpframework_wp_title', 10, 2 );
 
 
 
+/**
+ * Widget initials
+ */
+ 
+if(!function_exists('jwp_widgets_initials')){ 
+	 
+	function jwp_widgets_initials() {
+
+		register_sidebar( array(
+			'name' => __( 'Main Sidebar', 'justwpframework' ),
+			'id' => 'sidebar-1',
+			'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'justwpframework' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		) );
+		
+	}
+
+}	
+
+add_action( 'widgets_init', 'jwp_widgets_initials' );
+
+
+
+
+
+
 
 /**
- * Files inclution
+ * Files inclusion
  */ 
 
  
