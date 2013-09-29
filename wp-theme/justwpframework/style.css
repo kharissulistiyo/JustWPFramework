@@ -41,11 +41,6 @@ body{
 	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
-ul,ol{
-	list-style:none;
-	margin:0;
-	padding:0;
-}
 
 h1 a,
 h2 a,
@@ -53,12 +48,23 @@ h3 a{
 	text-decoration:none;
 }
 
+ul,ol{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
 
+a,
+a:active,
+a:visited{
+	outline:none;
+}
 
 
 
 #wrapper{
 	width:980px;
+	max-width:100%;
 	margin:0 auto;	
 }
 
@@ -100,20 +106,20 @@ h3 a{
 }
 
 
-.top-navigation ul a{
+.top-navigation a{
 	text-decoration:none;
 }
 
-.top-navigation ul > li{
+.top-navigation li{
 	float:left;
 	position:relative;
 }
 
-.top-navigation ul li{
+.top-navigation li{
 	display:inline-block;
 }
 	
-.top-navigation ul li ul{
+.top-navigation li ul{
 	width:210px;
 	position:absolute;
 	top:100%;
@@ -122,19 +128,19 @@ h3 a{
 	z-index:2;
 }
 
-.top-navigation ul li ul li{
+.top-navigation li ul li{
 	display:block;
 	float:none;
 	background:#ccc;
 }
 
-.top-navigation ul li a{
+.top-navigation li a{
 	display:inline-block;
 	padding:13px 20px;
 }
 
 
-.top-navigation ul li:hover > ul{
+.top-navigation li:hover > ul{
 	display:block;
 }
 
@@ -146,6 +152,22 @@ a.skip-link{
 h3.menu-toggler, a.skip-link{
 	display:none;
 }
+
+
+
+
+
+/*
+* Footer
+* ================= */
+
+.footer-credit{
+	margin-top:40px;
+	padding:30px 0;
+	border-top:1px solid #ccc;
+	text-align:center;
+}
+
 
 
 
