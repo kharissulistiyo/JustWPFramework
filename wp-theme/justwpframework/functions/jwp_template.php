@@ -84,6 +84,7 @@ if(!function_exists('jwp_searchform')){
 		// Default args
 		$defaults = array (
 			'label' => __('Search for: ', 'justwpframework'),
+			'placeholder' => __('Put a keyword ', 'justwpframework'),
 			'show_button' => TRUE,
 			'button_text' => __('Search', 'justwpframework')
 		);
@@ -97,7 +98,7 @@ if(!function_exists('jwp_searchform')){
 		$output = '<form role="search" method="get" id="searchform" action="' .home_url( '/' ) . '">' . "\n\n";
 		$output .= '<div>' . "\n";
 		$output .= $label;
-		$output .= '<input type="text" value="" name="s" id="s" />';
+		$output .= '<input type="text" value="" name="s" id="s" placeholder="' . $placeholder . '" />';
 		
 		if($show_button == TRUE)
 			$output .= '<input type="submit" id="searchsubmit" value="' . $button_text . '" />';
