@@ -1,6 +1,9 @@
 A Hello World WP Framework
 ==========================
 
+Live demo: http://www.kharissulistiyono.com/jwp-framework
+
+
 This is still in a production. Any feedbacks or comments are wellcome! 
 
 First stage:
