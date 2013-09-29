@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: justwpframework\n"
-"POT-Creation-Date: 2013-09-19 07:21+0700\n"
-"PO-Revision-Date: 2013-09-19 07:22+0700\n"
+"POT-Creation-Date: 2013-09-29 11:52+0700\n"
+"PO-Revision-Date: 2013-09-29 11:54+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -12,3 +12,44 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_x\n"
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../justwpframework/functions.php:37
+msgid "Primary Menu"
+msgstr ""
+
+#: ../justwpframework/functions.php:96
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../justwpframework/functions/jwp_template.php:41
+msgid "Main Menu"
+msgstr ""
+
+#: ../justwpframework/functions/jwp_template.php:42
+msgid "Skip to content"
+msgstr ""
+
+#: ../justwpframework/functions/jwp_template.php:86
+msgid "Search for: "
+msgstr ""
+
+#: ../justwpframework/functions/jwp_template.php:88
+msgid "Search"
+msgstr ""
+
+#: ../justwpframework/functions/wp_parse_args.php:26
+msgid "Tag : "
+msgstr ""
+
+#: ../justwpframework/functions/wp_parse_args.php:27
+msgid "Archive : "
+msgstr ""
+
+#: ../justwpframework/functions/wp_parse_args.php:28
+msgid "Search for : "
+msgstr ""
+
+#: ../justwpframework/functions/wp_parse_args.php:29
+msgid "Nothing found"
+msgstr ""
