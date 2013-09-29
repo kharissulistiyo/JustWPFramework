@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 /*
  * Function to register front-end scripts
  * ====================================== */
