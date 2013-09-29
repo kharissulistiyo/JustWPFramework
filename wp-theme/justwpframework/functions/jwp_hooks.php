@@ -43,3 +43,15 @@ add_action('jwp_entry_content', 'jwp_link_pages', 15);
 add_action('jwp_entry_content', 'jwp_after_entry_content', 20); 
 
 add_action('jwp_entry_footer', 'jwp_comment_count', 5);
+add_action('jwp_entry_footer', 'jwp_post_navigation', 10);
+add_action('jwp_entry_footer', 'jwp_post_comment', 15);
+
+
+add_action('jwp_after_post_loop', 'jwp_page_navigation', 5);
+
+
+/*
+ * Footer
+* ============ */
+
+add_action('jwp_footer', 'jwp_footer_credit', 30);  
