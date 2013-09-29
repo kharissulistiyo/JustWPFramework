@@ -14,6 +14,10 @@ First stage:
 		- Media
 		- Table
 		- WordPress Functionalities (Native CSS WP Classes)
+		
+	- WP theme files
+
+		- Available in wp-theme folder
 
 This baby framework includes: 
 
@@ -22,4 +26,5 @@ This baby framework includes:
 
 Installation:
 
-- Copy this repo into your root directory of local or live server, then run from your browser.
+- Front-end elements in action: Copy this repo into your root directory of local or live server, then run from your browser.
+- WP theme in action: Copy the "justwpthemeframework" folder inside "wp-theme" to your "themes" folder of your WordPress installation, then activate. Enjoy!
