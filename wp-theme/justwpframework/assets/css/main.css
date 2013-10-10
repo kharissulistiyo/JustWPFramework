@@ -1,0 +1,104 @@
+/* 
+* Theme's Main Styles
+* ==================== */
+body {
+  background: #ECF0F1;
+  color: #2A3E50;
+  padding: 0;
+  margin: 0;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; }
+
+h1 a,
+h2 a,
+h3 a {
+  text-decoration: none; }
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a,
+a:active,
+a:visited {
+  outline: none; }
+
+#wrapper {
+  width: 980px;
+  max-width: 100%;
+  margin: 0 auto; }
+
+/*
+* Main Navigation
+* ============== */
+#main-navigation {
+  background: #ccc; }
+
+#main-navigation:before, #main-navigation:after,
+.top-navigation:before, .top-navigation:after,
+.navigation-menu .top-navigation > ul:before,
+.navigation-menu .top-navigation > ul:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.top-navigation {
+  background: #ccc; }
+
+.navigation-menu .top-navigation {
+  width: 60%;
+  float: left; }
+
+.top-navigation > ul {
+  background: #ccc; }
+
+.navigation-menu form#searchform {
+  display: table;
+  width: 35%;
+  float: right; }
+
+.top-navigation a {
+  text-decoration: none; }
+
+.top-navigation li {
+  float: left;
+  position: relative; }
+
+.top-navigation li {
+  display: inline-block; }
+
+.top-navigation li ul {
+  width: 210px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  z-index: 2; }
+
+.top-navigation li ul li {
+  display: block;
+  float: none;
+  background: #ccc; }
+
+.top-navigation li a {
+  display: inline-block;
+  padding: 13px 20px; }
+
+.top-navigation li:hover > ul {
+  display: block; }
+
+a.skip-link {
+  clear: both;
+  display: block; }
+
+h3.menu-toggler, a.skip-link {
+  display: none; }
+
+/*
+* Footer
+* ================= */
+.footer-credit {
+  margin-top: 40px;
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+  text-align: center; }
